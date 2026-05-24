@@ -17,6 +17,14 @@ public class GameWindow extends JFrame
         {
             JButton cell = new JButton();
             cell.setBackground(new Color(34, 139, 34));
+            cell.addActionListener(e -> {
+                int x = cell.getX();
+                int y = cell.getY();
+                Peashooter plant = new Peashooter(x, y);
+                GameManager.getInstance().addPlant(plant);
+                cell.setText("P"); 
+                cell.setBackground(new Color(144, 238, 144));
+                cell.setEnabled(false);
             boardPanel.add(cell);
         }
         add(boardPanel);
