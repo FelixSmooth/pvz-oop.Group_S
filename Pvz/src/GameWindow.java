@@ -25,6 +25,7 @@ public class GameWindow extends JFrame
                 cell.setText("P"); 
                 cell.setBackground(new Color(144, 238, 144));
                 cell.setEnabled(false);
+            });
             boardPanel.add(cell);
         }
         add(boardPanel);
