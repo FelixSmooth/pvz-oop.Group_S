@@ -10,9 +10,10 @@ public class GameManager
 
     private GameManager()
     {
-        sunCount = 50;
+        sunCount = 1000; //initial sun count for testing
         plants = new ArrayList<>();
         zombies = new ArrayList<>();
+        bullets = new ArrayList<>();
     }
 
     public static GameManager getInstance()
@@ -30,6 +31,9 @@ public class GameManager
 
     public ArrayList<Zombie> getZombies() {
         return zombies;
+    }
+    public ArrayList<Plant> getPlants(){
+        return plants;
     }
 
     public void addBullet(Bullet b) {
